@@ -2,6 +2,13 @@ const express = require("express");
 const Shopify = require("shopify-api-node");
 const router = express.Router();
 const crypto = require("crypto");
+const fs = require("fs");
+const path = require("path");
+
+let shopifyOrder = {};
+
+console.log("Current working directory:", process.cwd());
+const filePath = path.join(__dirname, "newOrderExmpl.json");
 
 const {
   SHOPIFY_API_KEY,
@@ -10,6 +17,7 @@ const {
   SCOPES,
   SHOPIFY_WEBHOOK_SECRET,
   ACCESS_TOKEN,
+  MINISOFT_API_URL,
 } = process.env;
 
 // Initialize Shopify with shop name and access token
@@ -96,10 +104,100 @@ function processOrder(order) {
   // updateMinisoftInventory(order.line_items);
 }
 
-// Route to display the last received order
-let lastOrder = null;
+// Load the Shopify order data from the JSON file
+const loadOrderFromFile = () => {
+  try {
+    if (fs.existsSync(filePath)) {
+      shopifyOrder = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    } else {
+      console.warn("newOrderExmpl.json file does not exist at path:", filePath);
+      shopifyOrder = {};
+    }
+  } catch (error) {
+    console.error("Error loading order from file:", error);
+  }
+};
+
+const saveOrderToFile = (order) => {
+  fs.writeFileSync(
+    "newOrderExmpl.json",
+    JSON.stringify(order, null, 2),
+    "utf8"
+  );
+};
+
+// Endpoint to receive Shopify order
+router.post("/new-order", (req, res) => {
+  shopifyOrder = req.body;
+  saveOrderToFile(shopifyOrder);
+  res.status(200).send("Order received");
+});
+
+function formatOrder(shopifyOrder) {
+  return {
+    orderId: shopifyOrder.id,
+    createdAt: shopifyOrder.created_at,
+    customer: {
+      email: shopifyOrder.email || "N/A",
+      phone: shopifyOrder.phone || "N/A",
+      currency: shopifyOrder.currency,
+      totalPrice: shopifyOrder.total_price,
+    },
+    items: shopifyOrder.line_items.map((item) => ({
+      name: item.name,
+      price: item.price,
+      quantity: item.quantity,
+    })),
+  };
+}
+
+// Endpoint to get the last order details
 router.get("/last-order", (req, res) => {
-  res.json(lastOrder || { message: "No orders received yet" });
+  loadOrderFromFile();
+
+  if (Object.keys(shopifyOrder).length === 0) {
+    return res.status(404).send("No order found");
+  }
+
+  const formattedOrder = formatOrder(shopifyOrder);
+  res.render("orderDetails", { order: formattedOrder });
+});
+
+// Endpoint to send the order to Minisoft API
+router.post("/send-order", async (req, res) => {
+  loadOrderFromFile();
+
+  const createRecipePayload = (order) => {
+    return {
+      Company: "Minisoft",
+      GroupName: "Test API",
+      DocumentName: "Test",
+      DocumentDate: order["created_at"],
+      Currency: order["currency"],
+      TotalAmount: order["total_price"],
+      Details: order["line_items"].map((item) => ({
+        ItemCode: item["product_id"],
+        ItemDescription: item["name"],
+        Quantity: item["quantity"],
+        UnitPrice: item["price"],
+      })),
+    };
+  };
+
+  const payload = createRecipePayload(shopifyOrder);
+
+  const apiUrl = `${MINISOFT_API_URL}/DocumentRest/CreateDocument`;
+  const headers = {
+    "Content-Type": "application/json",
+  };
+
+  try {
+    const response = await axios.post(apiUrl, payload, { headers });
+    res.status(200).json(response.data);
+  } catch (error) {
+    console.error("Error sending order to API:", error);
+    res.status(500).send("Error sending order to API");
+  }
 });
 
 module.exports = router;

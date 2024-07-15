@@ -1,0 +1,271 @@
+{
+  "id": 5858090221795,
+  "admin_graphql_api_id": "gid://shopify/Order/5858090221795",
+  "app_id": 1354745,
+  "browser_ip": "46.121.71.133",
+  "buyer_accepts_marketing": false,
+  "cancel_reason": null,
+  "cancelled_at": null,
+  "cart_token": null,
+  "checkout_id": 35933720117475,
+  "checkout_token": "5af78c2b9ea53c20ddbcc608f5998ad5",
+  "client_details": {
+    "accept_language": null,
+    "browser_height": null,
+    "browser_ip": "46.121.71.133",
+    "browser_width": null,
+    "session_hash": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
+  },
+  "closed_at": null,
+  "company": null,
+  "confirmation_number": "UVGCYRCGW",
+  "confirmed": true,
+  "contact_email": null,
+  "created_at": "2024-07-15T07:28:44-04:00",
+  "currency": "ILS",
+  "current_subtotal_price": "749.95",
+  "current_subtotal_price_set": {
+    "shop_money": {
+      "amount": "749.95",
+      "currency_code": "ILS"
+    },
+    "presentment_money": {
+      "amount": "749.95",
+      "currency_code": "ILS"
+    }
+  },
+  "current_total_additional_fees_set": null,
+  "current_total_discounts": "0.00",
+  "current_total_discounts_set": {
+    "shop_money": {
+      "amount": "0.00",
+      "currency_code": "ILS"
+    },
+    "presentment_money": {
+      "amount": "0.00",
+      "currency_code": "ILS"
+    }
+  },
+  "current_total_duties_set": null,
+  "current_total_price": "877.44",
+  "current_total_price_set": {
+    "shop_money": {
+      "amount": "877.44",
+      "currency_code": "ILS"
+    },
+    "presentment_money": {
+      "amount": "877.44",
+      "currency_code": "ILS"
+    }
+  },
+  "current_total_tax": "127.49",
+  "current_total_tax_set": {
+    "shop_money": {
+      "amount": "127.49",
+      "currency_code": "ILS"
+    },
+    "presentment_money": {
+      "amount": "127.49",
+      "currency_code": "ILS"
+    }
+  },
+  "customer_locale": "en",
+  "device_id": null,
+  "discount_codes": [],
+  "email": "",
+  "estimated_taxes": false,
+  "financial_status": "paid",
+  "fulfillment_status": null,
+  "landing_site": null,
+  "landing_site_ref": null,
+  "location_id": 73049080035,
+  "merchant_of_record_app_id": null,
+  "name": "#1006",
+  "note": null,
+  "note_attributes": [],
+  "number": 6,
+  "order_number": 1006,
+  "order_status_url": "https://tzvitest.myshopify.com/67739713763/orders/6448761af7ac634ffab53e82bace37ad/authenticate?key=ceab53efc7e4ee3d2062de67783aab4c",
+  "original_total_additional_fees_set": null,
+  "original_total_duties_set": null,
+  "payment_gateway_names": ["manual"],
+  "phone": null,
+  "po_number": null,
+  "presentment_currency": "ILS",
+  "processed_at": "2024-07-15T07:28:44-04:00",
+  "reference": "be3511103eb8eeda91cbc961b751755d",
+  "referring_site": null,
+  "source_identifier": "be3511103eb8eeda91cbc961b751755d",
+  "source_name": "shopify_draft_order",
+  "source_url": null,
+  "subtotal_price": "749.95",
+  "subtotal_price_set": {
+    "shop_money": {
+      "amount": "749.95",
+      "currency_code": "ILS"
+    },
+    "presentment_money": {
+      "amount": "749.95",
+      "currency_code": "ILS"
+    }
+  },
+  "tags": "",
+  "tax_exempt": false,
+  "tax_lines": [
+    {
+      "price": "127.49",
+      "rate": 0.17,
+      "title": "VAT",
+      "price_set": {
+        "shop_money": {
+          "amount": "127.49",
+          "currency_code": "ILS"
+        },
+        "presentment_money": {
+          "amount": "127.49",
+          "currency_code": "ILS"
+        }
+      },
+      "channel_liable": false
+    }
+  ],
+  "taxes_included": false,
+  "test": false,
+  "token": "6448761af7ac634ffab53e82bace37ad",
+  "total_discounts": "0.00",
+  "total_discounts_set": {
+    "shop_money": {
+      "amount": "0.00",
+      "currency_code": "ILS"
+    },
+    "presentment_money": {
+      "amount": "0.00",
+      "currency_code": "ILS"
+    }
+  },
+  "total_line_items_price": "749.95",
+  "total_line_items_price_set": {
+    "shop_money": {
+      "amount": "749.95",
+      "currency_code": "ILS"
+    },
+    "presentment_money": {
+      "amount": "749.95",
+      "currency_code": "ILS"
+    }
+  },
+  "total_outstanding": "0.00",
+  "total_price": "877.44",
+  "total_price_set": {
+    "shop_money": {
+      "amount": "877.44",
+      "currency_code": "ILS"
+    },
+    "presentment_money": {
+      "amount": "877.44",
+      "currency_code": "ILS"
+    }
+  },
+  "total_shipping_price_set": {
+    "shop_money": {
+      "amount": "0.00",
+      "currency_code": "ILS"
+    },
+    "presentment_money": {
+      "amount": "0.00",
+      "currency_code": "ILS"
+    }
+  },
+  "total_tax": "127.49",
+  "total_tax_set": {
+    "shop_money": {
+      "amount": "127.49",
+      "currency_code": "ILS"
+    },
+    "presentment_money": {
+      "amount": "127.49",
+      "currency_code": "ILS"
+    }
+  },
+  "total_tip_received": "0.00",
+  "total_weight": 0,
+  "updated_at": "2024-07-15T07:28:45-04:00",
+  "user_id": 91619098851,
+  "billing_address": null,
+  "customer": null,
+  "discount_applications": [],
+  "fulfillments": [],
+  "line_items": [
+    {
+      "id": 14092076417251,
+      "admin_graphql_api_id": "gid://shopify/LineItem/14092076417251",
+      "attributed_staffs": [],
+      "current_quantity": 1,
+      "fulfillable_quantity": 1,
+      "fulfillment_service": "manual",
+      "fulfillment_status": null,
+      "gift_card": false,
+      "grams": 0,
+      "name": "The Collection Snowboard: Liquid",
+      "price": "749.95",
+      "price_set": {
+        "shop_money": {
+          "amount": "749.95",
+          "currency_code": "ILS"
+        },
+        "presentment_money": {
+          "amount": "749.95",
+          "currency_code": "ILS"
+        }
+      },
+      "product_exists": true,
+      "product_id": 8268571148515,
+      "properties": [],
+      "quantity": 1,
+      "requires_shipping": true,
+      "sku": "",
+      "taxable": true,
+      "title": "The Collection Snowboard: Liquid",
+      "total_discount": "0.00",
+      "total_discount_set": {
+        "shop_money": {
+          "amount": "0.00",
+          "currency_code": "ILS"
+        },
+        "presentment_money": {
+          "amount": "0.00",
+          "currency_code": "ILS"
+        }
+      },
+      "variant_id": 44329882517731,
+      "variant_inventory_management": "shopify",
+      "variant_title": null,
+      "vendor": "Hydrogen Vendor",
+      "tax_lines": [
+        {
+          "channel_liable": false,
+          "price": "127.49",
+          "price_set": {
+            "shop_money": {
+              "amount": "127.49",
+              "currency_code": "ILS"
+            },
+            "presentment_money": {
+              "amount": "127.49",
+              "currency_code": "ILS"
+            }
+          },
+          "rate": 0.17,
+          "title": "VAT"
+        }
+      ],
+      "duties": [],
+      "discount_allocations": []
+    }
+  ],
+  "payment_terms": null,
+  "refunds": [],
+  "shipping_address": null,
+  "shipping_lines": []
+}

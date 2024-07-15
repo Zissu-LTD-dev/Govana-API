@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        .order-info {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .order-items {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .order-items th,
+        .order-items td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .order-items th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .total-price {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Order Details</h1>
+    <div class="order-info">
+        <p><strong>Order ID:</strong>
+            <%= order.orderId %>
+        </p>
+        <p><strong>Created At:</strong>
+            <%= order.createdAt %>
+        </p>
+        <p><strong>Customer Email:</strong>
+            <%= order.customer.email %>
+        </p>
+        <p><strong>Customer Phone:</strong>
+            <%= order.customer.phone %>
+        </p>
+        <p><strong>Currency:</strong>
+            <%= order.customer.currency %>
+        </p>
+    </div>
+    <h2>Order Items</h2>
+    <table class="order-items">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% order.items.forEach(item=> { %>
+                <tr>
+                    <td>
+                        <%= item.name %>
+                    </td>
+                    <td>
+                        <%= order.customer.currency %>
+                            <%= item.price %>
+                    </td>
+                    <td>
+                        <%= item.quantity %>
+                    </td>
+                    <td>
+                        <%= order.customer.currency %>
+                            <%= (item.price * item.quantity).toFixed(2) %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+    <p class="total-price">Total Price: <%= order.customer.currency %>
+            <%= order.customer.totalPrice %>
+    </p>
+</body>
+
+</html>
