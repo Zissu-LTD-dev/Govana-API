@@ -6,6 +6,12 @@ const shopifyRoutes = require("./routes/shopify");
 
 const app = express();
 app.use(cors());
+
+app.use(
+  "/shopify/webhooks/order/create",
+  express.raw({ type: "application/json" })
+);
+
 app.use(express.json());
 
 app.use("/minisoft", minisoftRoutes);
