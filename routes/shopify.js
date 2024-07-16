@@ -4,6 +4,7 @@ const router = express.Router();
 const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
+const axios = require("axios");
 
 let shopifyOrder = {};
 
@@ -26,7 +27,7 @@ const shopify = new Shopify({
   accessToken: "ACCESS_TOKEN",
 });
 
-// Existing route
+// New route for getting all products
 router.get("/products", async (req, res) => {
   try {
     const session = await Shopify.Utils.loadCurrentSession(req, res);
@@ -72,15 +73,18 @@ router.post("/webhooks/order/create", (req, res) => {
 
     try {
       const orderData = JSON.parse(body.toString());
-      console.log("New order received:", orderData.id);
+      console.log(`New order received: ${orderData.id}`);
 
       // Process the order
       processOrder(orderData);
 
+      // Send order to Minisoft
+      sendOrderToMinisoft(orderData);
+
       res.sendStatus(200);
     } catch (error) {
-      console.error("Error parsing order data:", error);
-      res.status(400).send("Error parsing order data");
+      console.error(`Error processing order data: ${error.message}`);
+      res.status(400).send("Error processing order data");
     }
   } else {
     console.error("Webhook verification failed");
@@ -88,6 +92,20 @@ router.post("/webhooks/order/create", (req, res) => {
   }
 });
 
+async function sendOrderToMinisoft(orderData) {
+  try {
+    console.log(`Sending order ${orderData.id} to Minisoft`);
+    const response = await axios.post(
+      "http://localhost:3000/minisoft/create-document",
+      orderData
+    );
+    console.log(`Order ${orderData.id} sent to Minisoft successfully`);
+  } catch (error) {
+    console.error(
+      `Failed to send order ${orderData.id} to Minisoft: ${error.message}`
+    );
+  }
+}
 function processOrder(order) {
   console.log(`Processing order ${order.id}:`);
   console.log(`- Order number: ${order.order_number}`);
