@@ -1,14 +1,14 @@
 {
-  "id": 5858090221795,
-  "admin_graphql_api_id": "gid://shopify/Order/5858090221795",
+  "id": 5860036870371,
+  "admin_graphql_api_id": "gid://shopify/Order/5860036870371",
   "app_id": 1354745,
   "browser_ip": "46.121.71.133",
   "buyer_accepts_marketing": false,
   "cancel_reason": null,
   "cancelled_at": null,
   "cart_token": null,
-  "checkout_id": 35933720117475,
-  "checkout_token": "5af78c2b9ea53c20ddbcc608f5998ad5",
+  "checkout_id": 35939197157603,
+  "checkout_token": "d478a124a0f4ef7a83aad5f282c8ddb9",
   "client_details": {
     "accept_language": null,
     "browser_height": null,
@@ -19,19 +19,19 @@
   },
   "closed_at": null,
   "company": null,
-  "confirmation_number": "UVGCYRCGW",
+  "confirmation_number": "JA8ZL7LHX",
   "confirmed": true,
-  "contact_email": null,
-  "created_at": "2024-07-15T07:28:44-04:00",
+  "contact_email": "ayumu.hirano@example.com",
+  "created_at": "2024-07-16T09:18:21-04:00",
   "currency": "ILS",
-  "current_subtotal_price": "749.95",
+  "current_subtotal_price": "785.95",
   "current_subtotal_price_set": {
     "shop_money": {
-      "amount": "749.95",
+      "amount": "785.95",
       "currency_code": "ILS"
     },
     "presentment_money": {
-      "amount": "749.95",
+      "amount": "785.95",
       "currency_code": "ILS"
     }
   },
@@ -48,32 +48,32 @@
     }
   },
   "current_total_duties_set": null,
-  "current_total_price": "877.44",
+  "current_total_price": "919.56",
   "current_total_price_set": {
     "shop_money": {
-      "amount": "877.44",
+      "amount": "919.56",
       "currency_code": "ILS"
     },
     "presentment_money": {
-      "amount": "877.44",
+      "amount": "919.56",
       "currency_code": "ILS"
     }
   },
-  "current_total_tax": "127.49",
+  "current_total_tax": "133.61",
   "current_total_tax_set": {
     "shop_money": {
-      "amount": "127.49",
+      "amount": "133.61",
       "currency_code": "ILS"
     },
     "presentment_money": {
-      "amount": "127.49",
+      "amount": "133.61",
       "currency_code": "ILS"
     }
   },
   "customer_locale": "en",
   "device_id": null,
   "discount_codes": [],
-  "email": "",
+  "email": "ayumu.hirano@example.com",
   "estimated_taxes": false,
   "financial_status": "paid",
   "fulfillment_status": null,
@@ -81,32 +81,32 @@
   "landing_site_ref": null,
   "location_id": 73049080035,
   "merchant_of_record_app_id": null,
-  "name": "#1006",
+  "name": "#1007",
   "note": null,
   "note_attributes": [],
-  "number": 6,
-  "order_number": 1006,
-  "order_status_url": "https://tzvitest.myshopify.com/67739713763/orders/6448761af7ac634ffab53e82bace37ad/authenticate?key=ceab53efc7e4ee3d2062de67783aab4c",
+  "number": 7,
+  "order_number": 1007,
+  "order_status_url": "https://tzvitest.myshopify.com/67739713763/orders/87692c9920ef55d8644631dfacbb5f11/authenticate?key=6efeb243fb23dddfb745624726385861",
   "original_total_additional_fees_set": null,
   "original_total_duties_set": null,
   "payment_gateway_names": ["manual"],
-  "phone": null,
+  "phone": "+16135550127",
   "po_number": null,
   "presentment_currency": "ILS",
-  "processed_at": "2024-07-15T07:28:44-04:00",
-  "reference": "be3511103eb8eeda91cbc961b751755d",
+  "processed_at": "2024-07-16T09:18:20-04:00",
+  "reference": "b895fd04ae66ce1ac9912fc35d656bc0",
   "referring_site": null,
-  "source_identifier": "be3511103eb8eeda91cbc961b751755d",
+  "source_identifier": "b895fd04ae66ce1ac9912fc35d656bc0",
   "source_name": "shopify_draft_order",
   "source_url": null,
-  "subtotal_price": "749.95",
+  "subtotal_price": "785.95",
   "subtotal_price_set": {
     "shop_money": {
-      "amount": "749.95",
+      "amount": "785.95",
       "currency_code": "ILS"
     },
     "presentment_money": {
-      "amount": "749.95",
+      "amount": "785.95",
       "currency_code": "ILS"
     }
   },
@@ -114,16 +114,16 @@
   "tax_exempt": false,
   "tax_lines": [
     {
-      "price": "127.49",
+      "price": "133.61",
       "rate": 0.17,
       "title": "VAT",
       "price_set": {
         "shop_money": {
-          "amount": "127.49",
+          "amount": "133.61",
           "currency_code": "ILS"
         },
         "presentment_money": {
-          "amount": "127.49",
+          "amount": "133.61",
           "currency_code": "ILS"
         }
       },
@@ -132,7 +132,7 @@
   ],
   "taxes_included": false,
   "test": false,
-  "token": "6448761af7ac634ffab53e82bace37ad",
+  "token": "87692c9920ef55d8644631dfacbb5f11",
   "total_discounts": "0.00",
   "total_discounts_set": {
     "shop_money": {
@@ -144,26 +144,26 @@
       "currency_code": "ILS"
     }
   },
-  "total_line_items_price": "749.95",
+  "total_line_items_price": "785.95",
   "total_line_items_price_set": {
     "shop_money": {
-      "amount": "749.95",
+      "amount": "785.95",
       "currency_code": "ILS"
     },
     "presentment_money": {
-      "amount": "749.95",
+      "amount": "785.95",
       "currency_code": "ILS"
     }
   },
   "total_outstanding": "0.00",
-  "total_price": "877.44",
+  "total_price": "919.56",
   "total_price_set": {
     "shop_money": {
-      "amount": "877.44",
+      "amount": "919.56",
       "currency_code": "ILS"
     },
     "presentment_money": {
-      "amount": "877.44",
+      "amount": "919.56",
       "currency_code": "ILS"
     }
   },
@@ -177,29 +177,57 @@
       "currency_code": "ILS"
     }
   },
-  "total_tax": "127.49",
+  "total_tax": "133.61",
   "total_tax_set": {
     "shop_money": {
-      "amount": "127.49",
+      "amount": "133.61",
       "currency_code": "ILS"
     },
     "presentment_money": {
-      "amount": "127.49",
+      "amount": "133.61",
       "currency_code": "ILS"
     }
   },
   "total_tip_received": "0.00",
   "total_weight": 0,
-  "updated_at": "2024-07-15T07:28:45-04:00",
+  "updated_at": "2024-07-16T09:18:22-04:00",
   "user_id": 91619098851,
   "billing_address": null,
-  "customer": null,
+  "customer": {
+    "id": 7318011347171,
+    "email": "ayumu.hirano@example.com",
+    "created_at": "2024-01-24T05:11:21-05:00",
+    "updated_at": "2024-07-16T09:18:21-04:00",
+    "first_name": "Ayumu",
+    "last_name": "Hirano",
+    "state": "disabled",
+    "note": null,
+    "verified_email": true,
+    "multipass_identifier": null,
+    "tax_exempt": false,
+    "phone": "+16135550127",
+    "email_marketing_consent": {
+      "state": "not_subscribed",
+      "opt_in_level": "single_opt_in",
+      "consent_updated_at": null
+    },
+    "sms_marketing_consent": {
+      "state": "not_subscribed",
+      "opt_in_level": "single_opt_in",
+      "consent_updated_at": null,
+      "consent_collected_from": "OTHER"
+    },
+    "tags": "",
+    "currency": "ILS",
+    "tax_exemptions": [],
+    "admin_graphql_api_id": "gid://shopify/Customer/7318011347171"
+  },
   "discount_applications": [],
   "fulfillments": [],
   "line_items": [
     {
-      "id": 14092076417251,
-      "admin_graphql_api_id": "gid://shopify/LineItem/14092076417251",
+      "id": 14094910816483,
+      "admin_graphql_api_id": "gid://shopify/LineItem/14094910816483",
       "attributed_staffs": [],
       "current_quantity": 1,
       "fulfillable_quantity": 1,
@@ -207,26 +235,26 @@
       "fulfillment_status": null,
       "gift_card": false,
       "grams": 0,
-      "name": "The Collection Snowboard: Liquid",
-      "price": "749.95",
+      "name": "The Compare at Price Snowboard",
+      "price": "785.95",
       "price_set": {
         "shop_money": {
-          "amount": "749.95",
+          "amount": "785.95",
           "currency_code": "ILS"
         },
         "presentment_money": {
-          "amount": "749.95",
+          "amount": "785.95",
           "currency_code": "ILS"
         }
       },
       "product_exists": true,
-      "product_id": 8268571148515,
+      "product_id": 8268570886371,
       "properties": [],
       "quantity": 1,
       "requires_shipping": true,
       "sku": "",
       "taxable": true,
-      "title": "The Collection Snowboard: Liquid",
+      "title": "The Compare at Price Snowboard",
       "total_discount": "0.00",
       "total_discount_set": {
         "shop_money": {
@@ -238,21 +266,21 @@
           "currency_code": "ILS"
         }
       },
-      "variant_id": 44329882517731,
+      "variant_id": 44329882288355,
       "variant_inventory_management": "shopify",
       "variant_title": null,
-      "vendor": "Hydrogen Vendor",
+      "vendor": "tzvitest",
       "tax_lines": [
         {
           "channel_liable": false,
-          "price": "127.49",
+          "price": "133.61",
           "price_set": {
             "shop_money": {
-              "amount": "127.49",
+              "amount": "133.61",
               "currency_code": "ILS"
             },
             "presentment_money": {
-              "amount": "127.49",
+              "amount": "133.61",
               "currency_code": "ILS"
             }
           },
