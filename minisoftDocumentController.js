@@ -20,9 +20,7 @@ class MinisoftDocumentController {
         DocType: 100,
         CustomerNo: 5001,
         Price: parseFloat(shopifyOrder.current_total_price),
-        PriceBeforeVat: parseFloat(
-          this.calculatePriceBeforeVat(shopifyOrder.subtotal_price)
-        ),
+        PriceBeforeVat: parseFloat(shopifyOrder.current_total_price / 1.17),
         Currency: {
           Type: this.getCurrencyType(shopifyOrder.currency),
         },
